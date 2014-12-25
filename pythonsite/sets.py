@@ -27,6 +27,6 @@ print (a & b)                              # letters in both a and b
 
 print (a ^ b)                              # letters in a or b but not both
 
-#set comprehension
+#set comprehension is also supported
 a = {x for x in 'abracadabra' if x not in 'abc'}
 print (a)
