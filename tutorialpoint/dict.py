@@ -1,29 +1,30 @@
-#!/usr/bin/python
+tel = {'jack': 4098, 'sape': 4139}
+tel['guido'] = 4127
+print (tel)
 
-dict = {'Name': 'Zara', 'Age': 7, 'Class': 'First'};
-copyDict = dict
+print (tel['jack'])
 
+del tel['sape']
+tel['irv'] = 4127
+print (tel)
 
-tinydict = {'name': 'john','code':6734, 'dept': 'sales'}
+print (list(tel.keys()))
 
+print (sorted(tel.keys()))
 
-print (dict['Name'])      # Prints value for 'one' key
+print ('guido' in tel)
 
-dict['Age'] = 8; # update existing entry
-dict['School'] = "DPS School"; # Add new entry
+print ('jack' not in tel)
 
-print (dict)
-print (copyDict)
-print (dict.items())
-print (tinydict)          # Prints complete dictionary
-print (tinydict.keys())   # Prints all the keys
-print (tinydict.values()) # Prints all the values
+# The dict() constructor builds dictionaries directly from sequences of key-value pairs:
+telNo = dict([('sape', 4139), ('guido', 4127), ('jack', 4098)])
+print (telNo)
 
-##Properties of dictionary keys
-# should be unique
-dict = {'Name': 'Zara', 'Age': 7, 'Name': 'Manni'};
+# dict comprehensions can be used to create dictionaries from arbitrary key and value expressions:
+numbers = {x: x**2 for x in (2, 4, 6)}
+print (numbers)
 
-print ("dict['Name']: ", dict['Name'])
+# When the keys are simple strings, it is sometimes easier to specify pairs using keyword arguments:
+simple = dict(sape=4139, guido=4127, jack=4098)
+print (simple)
 
-#Keys must be immutable.
-#dict = {['Name']: 'Zara', 'Age': 7}
