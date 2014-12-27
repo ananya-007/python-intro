@@ -1,5 +1,4 @@
 import pprint
-import json
 
 pp = pprint.PrettyPrinter(indent=4)
 # When looping through dictionaries, the key and corresponding value can be retrieved at the same time using the items() method.
@@ -40,3 +39,7 @@ for w in words[:]:  # Loop over a slice copy of the entire list.
         words.insert(0, w)
 
 print (words)
+
+for item in zip(questions, answers):
+    print(item)
+
